@@ -15,6 +15,9 @@ func (d *Date) SetYear(year int) error {
 	d.year = year
 	return nil
 }
+func (d *Date) Year() int { //Get-метод для года
+	return d.year
+}
 
 func (d *Date) SetMonth(month int) error {
 	if month < 1 || month > 12 {
@@ -23,6 +26,9 @@ func (d *Date) SetMonth(month int) error {
 	d.month = month
 	return nil
 }
+func (d *Date) Month() int { //Get-метод для месяца
+	return d.month
+}
 
 func (d *Date) SetDay(day int) error {
 	if day < 1 || day > 31 {
@@ -30,4 +36,7 @@ func (d *Date) SetDay(day int) error {
 	}
 	d.day = day
 	return nil
+}
+func (d *Date) Day() int {
+	return d.day
 }
